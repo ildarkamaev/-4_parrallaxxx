@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Nobile:400,700&display=swap');
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #191919;
+    font-family: 'Nobile', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        font-weight: 700;
+        color: #353535;
+        text-decoration: none;
+    }
+    i{
+        color: #353535;
+    }
+}
+
+.container{
+    padding: 2rem;
+    height: 100vh;
+    &:first-child{
+        display: grid;
+        grid-template-rows: 10% 30% auto;
+    }
+    h1{
+        text-align: center;
+        margin-top: 2rem;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: .9;
+    }
+
+    h2{
+        color: #f9f9fa;
+    }
+    p{
+        line-height: 1.5;
+        text-align: justify;
+        color:#f9f9fa;
+    }
+
+    .subtext{
+        margin: 1rem 0;
+        text-transform: uppercase;
+        color: darken(#f9f9fa, 40);
+    }
+
+    .line{
+        align-self: end;
+        width: 50%;
+        border-right: 1px solid white;
+        height: 50%;
+        margin-bottom: 4rem;
+        position: relative;
+        
+        &::after{
+            content: '';
+            position: absolute;
+            with: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 11px 11px 0 11px;
+            right: -.7em;
+            bottom: -2px;
+            border-color: white transparent transparent transparent;
+        }
+    }
+}
+
+.mountains, .forest{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.mountains{
+    top: 0;
+}
+
+.forest{
+    top: 18%;
+}
+
+.secondary{
+    margin-top: -5rem;
+}
+
+@media only screen and (min-width: 480px){
+    .mountains{
+        top: -25%;
+    }
+    .forest{
+        top: -5%;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .mountains{
+        top: -45%;
+    }
+    .forest{
+        top: -15%;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .mountains{
+        top: -65%;
+    }
+    .forest{
+        top: -25%;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    .mountains{
+        top: -85%;
+    }
+    .forest{
+        top: -45%;
+    }
+}
+
